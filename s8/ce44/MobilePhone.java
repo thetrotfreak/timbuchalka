@@ -12,14 +12,20 @@ public class MobilePhone {
     }
 
     public boolean addNewContact(Contact contact) {
-        return (findContact(contact) < 0) ? true : false;
+
+        if (findContact(contact) == -1) {
+            myContacts.add(contact);
+            return true;
+        }
+
+        return false;
     }
 
     public boolean updateContact(Contact oldContact, Contact newContact) {
 
         int index = findContact(oldContact);
 
-        if (index >= 0) {
+        if (index != -1) {
             myContacts.set(index, newContact);
             return true;
         }
@@ -31,7 +37,7 @@ public class MobilePhone {
 
         int index = findContact(contact);
 
-        if (index >= 0) {
+        if (index != -1) {
             myContacts.remove(index);
             return true;
         }
@@ -39,23 +45,27 @@ public class MobilePhone {
         return false;
     }
 
-    // mathces against first occurence of whole Contact object
     private int findContact(Contact contact) {
         return myContacts.indexOf(contact);
     }
 
-    // mathces against first occurence of name only
     private int findContact(String name) {
-        return myContacts.indexOf(name);
+
+        for (Contact contact : myContacts)
+            if (contact.getName().equals(name))
+                return myContacts.indexOf(contact);
+
+        return -1;
     }
 
     public Contact queryContact(String name) {
 
         int index = findContact(name);
 
-        if (index >= 0) {
+        if (index != -1) {
             return myContacts.get(index);
         }
+
         return null;
     }
 
@@ -65,7 +75,7 @@ public class MobilePhone {
         int count = 0;
 
         for (Contact contact : myContacts)
-            System.out.println(++count + ". " + contact.getName() + " ->" + contact.getPhoneNumber());
+            System.out.println(++count + ". " + contact.getName() + " -> " + contact.getPhoneNumber());
 
     }
 }
