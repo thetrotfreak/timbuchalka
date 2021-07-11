@@ -1,2 +1,7 @@
-# timbuchalka
-Java Programs for Udemy Java Master Classs by Tim Buchalka
+# **Java Programs for Udemy Java Master Classs [Tim Buchalka]**
+
+## Directory Structure
+
+>`s# : Section #`
+
+>`ce# : Coding Exercise #`
