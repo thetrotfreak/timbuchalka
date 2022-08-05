@@ -31,7 +31,7 @@ public class Album {
     }
 
     public boolean addToPlayList(int track, LinkedList<Song> playList) {
-        // argument track follows narutal counting
+        // argument track follows natural counting
         // not whole counting
         // that is, if track = 1 means 0 in ArrayList<Song>
         try {

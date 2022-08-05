@@ -17,7 +17,7 @@ public class FlourPacker {
 
         /*
          * express goal = (5 * big) + small => g = 5b + s which is basically normal
-         * divison
+         * division
          */
 
         for (int big = bigCount; big >= 0; big--) {

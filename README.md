@@ -1,4 +1,4 @@
-# **Java Programs for Udemy Java Master Classs [Tim Buchalka]**
+# **Java Programs for Udemy Java Master Class [Tim Buchalka]**
 
 ## Directory Structure
 

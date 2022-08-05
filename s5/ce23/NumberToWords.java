@@ -94,7 +94,7 @@ public class NumberToWords {
         }
 
         /*
-         * catches the case when arguemnts to numberToWords() has zeroes in the end in
+         * catches the case when arguments to numberToWords() has zeroes in the end in
          * other words, digits in number != digits in its reverse eg: number = 100,
          * reverse = 1 therefore, digits(100) != digits(reverse) => 3 != 1 =>
          * zeroes:3-1=2
